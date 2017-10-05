@@ -198,21 +198,101 @@
 			</div>
 	</div>
 	<!--//footer-->
-      
+      	<!--copyright-->
       <div class="footer-w3layouts">
       <div class="container">
-        <div class="agile-copy">
-          <p>© Blissful Abode. All rights reserved </p>
-        </div>
-        <div class="agileits-social">
-          <ul>
-            <li><a href="https://www.facebook.com/BlissfulAbode/"><i class="fa fa-facebook"></i></a></li>
+	<div class="agile-copy">
+	  <p>© Blissful Abode. All rights reserved </p>
+	</div>
+	<div class="agileits-social">
+	  <ul>
+	    <li><a href="https://www.facebook.com/BlissfulAbode/"><i class="fa fa-facebook"></i></a></li>
 
-          </ul>
-        </div>
-        <div class="clearfix"></div>
+	  </ul>
+	</div>
+	<div class="clearfix"></div>
       </div>
     </div>
-    
+    	<!--//copyright-->
+	
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+
+<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+
+<script src="js/responsiveslides.min.js"></script>
+		<script>
+				$(function () {
+					$("#slider").responsiveSlides({
+						auto: true,
+						pager: true,
+						nav: true,
+						speed: 1000,
+						namespace: "callbacks",
+						before: function () {
+							$('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+							$('.events').append("<li>after event fired.</li>");
+						}
+					});
+				});
+			</script>
+		
+		<!--search-bar-->
+		<script src="js/main.js"></script>	
+<!--//search-bar-->
+
+<script defer src="js/jquery.flexslider.js"></script>
+<!--Start-slider-script-->
+		<script type="text/javascript">
+		
+		$(window).load(function(){
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}
+		  });
+		});
+	  </script>
+<!--End-slider-script-->
+
+
+<!-- start-smooth-scrolling -->
+
+<script src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smooth-scrolling -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->     
+	     
+	     
+	     
      </body>
 	</html>
