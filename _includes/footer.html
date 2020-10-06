@@ -1,0 +1,171 @@
+
+<!--footer-->
+	<div class="footer">
+			<div class="footer-main">
+				<div class="col-md-4 ftr-grid">
+					<div class="col-md-2 address">
+						<i class="fa fa-map-marker" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-10 address add">
+						<h4>Address</h4>
+						<span class="ftr-line"> </span>
+						<p>Vappala, Ananganadi,Ottappalam</p>
+						<p>Palakkad, Kerala </p>
+					</div>
+				<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-4 ftr-grid ftr-mid">
+					<div class="col-md-2 address">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-10 address phone add">
+						<h4>Telephone</h4>
+						<span class="ftr-line"> </span>
+						<p>+91 99 72 33 11 66</p>
+						<p>+91 98 45 54 70 05</p>
+					</div>
+				<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-4 ftr-grid ftr-rit">
+					<div class="col-md-2 address">
+						<i class="fa fa-paper-plane" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-10 address add">
+						<h4>Email</h4>
+						<span class="ftr-line"> </span>
+						<p><a href="mailto:ramkumar95@gmail.com"> ramkumar95@gmail.com</a></p>
+						<p><a href="mailto:cmdhanya@gmail.com"> cmdhanya@gmail.com</a></p>
+					</div>
+				<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+	</div>
+	<!--//footer-->
+      	<!--copyright-->
+      <div class="footer-w3layouts">
+      <div class="container">
+	<div class="agile-copy">
+	  <p>© Blissful Abode. All rights reserved </p>
+	</div>
+	<div class="agileits-social">
+	  <ul>
+	    <li><a href="https://www.facebook.com/BlissfulAbode/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+
+	  </ul>
+	</div>
+	<div class="clearfix"></div>
+      </div>
+    </div>
+    	<!--//copyright-->
+	
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+
+<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+
+<script src="js/responsiveslides.min.js"></script>
+		<script>
+				$(function () {
+					$("#slider").responsiveSlides({
+						auto: true,
+						pager: true,
+						nav: true,
+						speed: 1000,
+						namespace: "callbacks",
+						before: function () {
+							$('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+							$('.events').append("<li>after event fired.</li>");
+						}
+					});
+				});
+			</script>
+		
+<!--search-bar-->
+<script src="/js/main.js"></script>	
+<!--//search-bar-->
+
+<script defer src="/js/jquery.flexslider.js"></script>
+<!--Start-slider-script-->
+		<script type="text/javascript">
+		
+		$(window).load(function(){
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}
+		  });
+		});
+	  </script>
+<!--End-slider-script-->
+
+
+<!-- start-smooth-scrolling -->
+
+<script src="/js/SmoothScroll.min.js"></script>
+<script type="text/javascript" src="/js/move-top.js"></script>
+<script type="text/javascript" src="/js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smooth-scrolling -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->   
+	     
+	     
+	     <!-- Tabs -->
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			jQuery('.tabs .tab-links a').on('click', function(e)  {
+				var currentAttrValue = jQuery(this).attr('href');
+		 
+				// Show/Hide Tabs
+				jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+		 
+				// Change/remove current tab to active
+				jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+		 
+				e.preventDefault();
+			});
+		});
+
+	</script>
+  <!-- //Tabs -->
+
+  <!-- Lightbox -->
+	<script src="/js/simpleLightbox.js"></script>
+	<script>
+		$('.w3layouts_gallery_grid a').simpleLightbox();
+	</script>
+<!-- //Lightbox -->
+
+<script src="/js/jquery.vide.min.js"></script>
+	     
+	     
+	     
+     </body>
+	</html>
